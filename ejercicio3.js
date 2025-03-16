@@ -44,17 +44,17 @@ function mostrarCola() {
 
 // Función del menú
 
-const menu ="\n--- Sistema de Cola de Clientes ---\n"+
+const menuFila ="\n--- Sistema de Cola de Clientes ---\n\n"+
     "1. Agregar Cliente a la Cola\n"+
     "2. Atender Cliente\n"+
     "3. Mostrar Cola de Clientes\n"+
     "4. Salir del Programa\n\n"+
     "Seleccione una opción: "
 
-function sistema() {
+ export function sistemaFila() {
     let opcion;
     do {
-        opcion = parseInt(prompt(menu));
+        opcion = parseInt(prompt(menuFila));
 
         switch (opcion) {
             case 1:
@@ -74,6 +74,3 @@ function sistema() {
         }
     } while (opcion !== 4);
 }
-
-// Iniciar el menú
-sistema();

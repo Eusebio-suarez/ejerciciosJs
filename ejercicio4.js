@@ -51,16 +51,16 @@ function sugerirProducto() {
     console.log("Todos los productos están agotados.");
 }
 
-const menu ="\n--- Máquina Expendedora ---\n"+
+const menu ="--- Máquina Expendedora ---\n\n"+
     "1. Mostrar Inventario\n"+
     "2. Comprar Producto\n"+
     "3. Salir\n\n"+
     "Seleccione una opción: ";
 
 // Menú interactivo
-function sistema() {
+ export function sistemaMaquina() {
     let opcion;
-    do {
+    while (opcion !== 3) {
         opcion = parseInt(prompt(menu));
 
         switch (opcion) {
@@ -77,8 +77,5 @@ function sistema() {
             default:
                 console.log("Opción no válida. Inténtelo de nuevo.");
         }
-    } while (opcion !== 3);
+    }
 }
-
-// Iniciar el menú
-sistema();

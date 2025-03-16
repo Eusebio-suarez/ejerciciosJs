@@ -1,5 +1,5 @@
 // Definir el menú del sistema
-let menu = "Menu del sistema\n" +
+let menuHabitaciones = "--- Menu del Hotel ---\n\n" +
 "1. Consultar habitaciones disponibles\n" +
 "2. Consultar habitaciones ocupadas\n" +
 "3. Consultar habitación\n" +
@@ -82,9 +82,8 @@ function cancelarReserva(idHabitacion) {
 }
 
 // Obtener la opción del usuario
-let opcion = parseInt(prompt(menu));
-
-// Ciclo para mostrar el menú
+ export function sistemaHotel() {
+    let opcion = parseInt(prompt(menuHabitaciones));
 while (opcion !== 6) {
     switch (opcion) {
         case 1:
@@ -109,7 +108,6 @@ while (opcion !== 6) {
             console.log("Opción no válida. Intente de nuevo.");
             break;
     }
-    opcion = parseInt(prompt(menu));
+    opcion = parseInt(prompt(menuHabitaciones));
 }
-
-console.log("Gracias por usar el sistema.");
+}

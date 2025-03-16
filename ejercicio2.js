@@ -61,7 +61,7 @@ function mostrarTransacciones() {
 
 
 // Menu del cajero automático
-const menu = "Cajero Automático\n\n" +
+const menuTexto = "--- Cajero Automatico ---\n\n" +
              "1. Consultar saldo\n" +
              "2. Depositar dinero\n" +
              "3. Retirar dinero\n" +
@@ -70,10 +70,10 @@ const menu = "Cajero Automático\n\n" +
              "Seleccione una opción:";
 
 // Menu interactivo
-function menuCajero() {
+ export function menuCajero() {
     let opcion;
     do {
-        opcion = parseInt(prompt(menu));
+        opcion = parseInt(prompt(menuTexto));
 
         switch (opcion) {
             case 1:
@@ -96,6 +96,3 @@ function menuCajero() {
         }
     } while (opcion !== 5);
 }
-
-// Iniciar el programa
-menuCajero();
